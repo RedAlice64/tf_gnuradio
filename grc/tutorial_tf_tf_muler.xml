@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<block>
+  <name>tf_muler</name>
+  <key>tutorial_tf_tf_muler</key>
+  <category>tutorial</category>
+  <import>import tutorial_tf</import>
+  <make>tutorial_tf.tf_muler()</make>
+  <!-- Make one 'param' node for every Parameter you want settable from the GUI.
+       Sub-nodes:
+       * name
+       * key (makes the value accessible as $keyname, e.g. in the make node)
+       * type -->
+
+  <!-- Make one 'sink' node per input. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <sink>
+    <name>x</name>
+    <type>complex</type>
+  </sink>
+  <sink>
+    <name>y</name>
+    <type>complex</type>
+  </sink>
+
+
+  <!-- Make one 'source' node per output. Sub-nodes:
+       * name (an identifier for the GUI)
+       * type
+       * vlen
+       * optional (set to 1 for optional inputs) -->
+  <source>
+    <name>out</name>
+    <type>complex</type>
+  </source>
+</block>
